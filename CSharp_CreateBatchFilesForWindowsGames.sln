@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateBatchFilesForWindowsGames", "CreateBatchFilesForWindowsGames\CreateBatchFilesForWindowsGames.csproj", "{5EAE4A4F-8380-4FD6-967F-E87ED73E5CAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EAE4A4F-8380-4FD6-967F-E87ED73E5CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAE4A4F-8380-4FD6-967F-E87ED73E5CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAE4A4F-8380-4FD6-967F-E87ED73E5CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAE4A4F-8380-4FD6-967F-E87ED73E5CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

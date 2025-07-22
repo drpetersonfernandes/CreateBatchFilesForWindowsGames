@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>icon\icon.ico</ApplicationIcon>
+    <UseWPF>true</UseWPF>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <AssemblyVersion>1.2</AssemblyVersion>
+    <FileVersion>1.2</FileVersion>
+    <RootNamespace>CreateBatchFilesForWindowsGames</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <LangVersion>13</LangVersion>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="icon\icon.ico" />
+    <Resource Include="icon\icon.png" />
+    <Resource Include="images\about.png" />
+    <Resource Include="images\exit.png" />
+    <None Remove="images\logo.png" />
+    <Resource Include="images\logo.png" />
+  </ItemGroup>
+
+</Project>

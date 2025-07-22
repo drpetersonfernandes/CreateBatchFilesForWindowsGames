@@ -1,0 +1,90 @@
+<Window x:Class="CreateBatchFilesForWindowsGames.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Batch File Creator for Windows Games"
+        Height="550" Width="800" MinHeight="500" MinWidth="600"
+        Closing="Window_Closing"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Menu -->
+            <RowDefinition Height="*"/>    <!-- Main Content -->
+            <RowDefinition Height="Auto"/> <!-- Status Bar -->
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="E_xit" Click="ExitMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="pack://application:,,,/images/exit.png" Width="16" Height="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Click="AboutMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="pack://application:,,,/images/about.png" Width="16" Height="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <!-- Main Content Area -->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Game Executable Selection -->
+            <Grid Grid.Row="0" Margin="10,10,10,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="75"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Game Executable:" VerticalAlignment="Center"/>
+                <TextBox x:Name="GameExePathTextBox" Grid.Column="1" Margin="5,0,5,0" Padding="5" IsReadOnly="True"/>
+                <Button x:Name="BrowseGameExeButton" Grid.Column="2" Content="Browse" Click="BrowseGameExeButton_Click" Padding="10,5"/>
+            </Grid>
+
+            <!-- Batch File Output Selection -->
+            <Grid Grid.Row="1" Margin="10,5,10,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="75"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Batch File Output:" VerticalAlignment="Center"/>
+                <TextBox x:Name="BatchFilePathTextBox" Grid.Column="1" Margin="5,0,5,0" Padding="5" IsReadOnly="True"/>
+                <Button x:Name="SaveBatchFileButton" Grid.Column="2" Content="Save As..." Click="SaveBatchFileButton_Click" Padding="10,5"/>
+            </Grid>
+
+            <!-- Action Buttons Container -->
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" Margin="10,10,10,15">
+                <Button x:Name="CreateBatchFileButton" Content="Create Batch File" Click="CreateBatchFileButton_Click" 
+                        Padding="15,8" FontWeight="Bold"/>
+                <Button x:Name="CreateAnotherButton" Content="Create Another Batch File" Click="CreateAnotherButton_Click" 
+                        Padding="15,8" Visibility="Collapsed"/>
+            </StackPanel>
+
+            <!-- Log TextBox -->
+            <TextBox x:Name="LogTextBox"
+                     Grid.Row="3"
+                     AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Visible"
+                     IsReadOnly="True"
+                     Margin="10,0,10,10"
+                     FontFamily="Consolas"/>
+        </Grid>
+
+        <!-- Status Bar -->
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock x:Name="StatusBarMessage" Text="Ready" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
