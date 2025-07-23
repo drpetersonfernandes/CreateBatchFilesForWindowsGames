@@ -44,9 +44,3 @@ This application simplifies the process of creating batch files for launching Wi
 *   **MainWindow.xaml/MainWindow.xaml.cs:** Main window of the application, handles UI interactions and batch file creation logic.
 *   **AboutWindow.xaml/AboutWindow.xaml.cs:** A separate window that displays application information, version, and credits.
 *   **BugReportService.cs:** A service that handles sending bug reports to a remote API using a shared, static `HttpClient`.
-
-## Bug Reporting
-
-The application includes a `BugReportService` which silently sends bug reports to a specified API endpoint. This helps in identifying and fixing issues without requiring user intervention. The API endpoint and key are now defined **only in `App.xaml.cs`** to ensure a single point of configuration.
-
-**Important:** The `BugReportApiUrl` and `BugReportApiKey` are placeholders and should be replaced with your actual API endpoint and key for the bug reporting service.
